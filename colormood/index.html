@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Color Mood & Relax — Support</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #0a0a12;
+      color: #fff;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 60px 24px;
+    }
+    .glow {
+      width: 220px; height: 220px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(120,80,255,0.35) 0%, transparent 70%);
+      position: fixed; top: -60px; left: 50%; transform: translateX(-50%);
+      pointer-events: none;
+    }
+    .container { max-width: 640px; width: 100%; }
+    .header { text-align: center; margin-bottom: 56px; }
+    .app-icon {
+      width: 96px; height: 96px;
+      border-radius: 22px;
+      background: linear-gradient(135deg, #6644cc, #cc4488);
+      margin: 0 auto 20px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 42px;
+    }
+    h1 { font-size: 28px; font-weight: 800; margin-bottom: 8px; }
+    .subtitle { color: rgba(255,255,255,0.45); font-size: 16px; }
+    .section { margin-bottom: 40px; }
+    h2 { font-size: 13px; font-weight: 700; letter-spacing: 2px;
+         color: rgba(255,255,255,0.35); text-transform: uppercase; margin-bottom: 16px; }
+    .card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 20px 24px;
+      margin-bottom: 10px;
+    }
+    .card h3 { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
+    .card p { font-size: 15px; color: rgba(255,255,255,0.55); line-height: 1.6; }
+    .contact-btn {
+      display: inline-block;
+      margin-top: 16px;
+      background: rgba(120,80,255,0.20);
+      border: 1px solid rgba(120,80,255,0.40);
+      color: #a888ff;
+      text-decoration: none;
+      padding: 12px 28px;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .contact-btn:hover { background: rgba(120,80,255,0.30); }
+    .privacy-link {
+      color: rgba(255,255,255,0.35);
+      font-size: 14px;
+      text-decoration: none;
+      display: block;
+      text-align: center;
+      margin-top: 48px;
+    }
+    .privacy-link:hover { color: rgba(255,255,255,0.6); }
+    footer { text-align: center; margin-top: 24px;
+             color: rgba(255,255,255,0.18); font-size: 13px; }
+  </style>
+</head>
+<body>
+  <div class="glow"></div>
+  <div class="container">
+
+    <div class="header">
+      <div class="app-icon">🎨</div>
+      <h1>Color Mood & Relax</h1>
+      <p class="subtitle">Mood journal · Patterns · Wellness tools</p>
+    </div>
+
+    <div class="section">
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="card">
+        <h3>How do I restore my Pro purchase?</h3>
+        <p>Open the app → tap the menu icon → Settings → scroll down and tap "Restore Purchase". Your purchase will be restored automatically if you're signed in with the same Apple ID.</p>
+      </div>
+
+      <div class="card">
+        <h3>I forgot my journal PIN. How do I reset it?</h3>
+        <p>On the PIN lock screen, tap "Forgot PIN?" and verify with your device passcode. You'll be able to set a new PIN immediately.</p>
+      </div>
+
+      <div class="card">
+        <h3>How do I delete all my data?</h3>
+        <p>Go to Settings → scroll to the bottom → tap "Delete All Data". This permanently removes all journal entries from your device. This action cannot be undone.</p>
+      </div>
+
+      <div class="card">
+        <h3>Why isn't weather logging for my entries?</h3>
+        <p>Weather logs automatically when you save a mood entry, but requires location permission. Go to iPhone Settings → Color Mood → Location → select "While Using the App".</p>
+      </div>
+
+      <div class="card">
+        <h3>Why isn't Apple Health data showing in Patterns?</h3>
+        <p>Go to Settings inside the app and tap "Connect Apple Health", then approve the permissions in the Health app. Make sure you have at least a few days of health data recorded.</p>
+      </div>
+
+      <div class="card">
+        <h3>Is my journal backed up to iCloud?</h3>
+        <p>No. All data stays only on your device — there is no cloud sync or account. Use the CSV export (Pro feature) to back up your entries manually.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Contact Support</h2>
+      <div class="card">
+        <h3>Still need help?</h3>
+        <p>Send us an email and we'll get back to you as soon as possible.</p>
+        <a class="contact-btn" href="mailto:support@tibelnora.com">Email Support</a>
+      </div>
+    </div>
+
+    <a class="privacy-link"
+       href="https://gist.githubusercontent.com/tibelnora/ac0520f112252824a07e2e4b21de7c01/raw/"
+       target="_blank">Privacy Policy</a>
+
+    <footer>
+      <p style="margin-top:16px;">© 2025 Tibel Nora. All rights reserved.</p>
+    </footer>
+
+  </div>
+</body>
+</html>
