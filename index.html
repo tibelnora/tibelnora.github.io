@@ -20,7 +20,9 @@
     ul { padding-left: 20px; }
     li { margin-bottom: 6px; }
     .app { display: flex; gap: 16px; align-items: flex-start; margin-bottom: 28px; }
-    .app img { width: 64px; height: 64px; border-radius: 14px; flex: none; box-shadow: 0 4px 14px rgba(0,0,0,0.4); }
+    .app-icon-link { flex: none; line-height: 0; }
+    .app-icon-link:hover img { transform: scale(1.05); }
+    .app img { transition: transform 0.15s; width: 64px; height: 64px; border-radius: 14px; flex: none; box-shadow: 0 4px 14px rgba(0,0,0,0.4); }
     .app h3 { color: #fff; font-size: 1.05rem; }
     .divider { border: none; border-top: 1px solid #26365e; margin: 0 24px; }
     footer { text-align: center; padding: 40px 24px; color: #7d8bb0; font-size: 0.85rem; }
@@ -39,7 +41,7 @@
 <section>
   <h2>Apps</h2>
     <div class="app">
-    <img src="img/colormood.png" width="64" height="64" alt="Color Mood: Journal &amp; Relax app icon" />
+    <a class="app-icon-link" href="https://apps.apple.com/app/id6762071350"><img src="img/colormood.png" width="64" height="64" alt="Color Mood: Journal &amp; Relax app icon" /></a>
     <div>
       <h3>Color Mood: Journal &amp; Relax</h3>
       <p>Mood journal with colors, patterns and calming tools.</p>
@@ -47,7 +49,7 @@
     </div>
   </div>
   <div class="app">
-    <img src="img/soundnative.png" width="64" height="64" alt="Sound Native Accent Reduction app icon" />
+    <a class="app-icon-link" href="https://apps.apple.com/app/id6785734428"><img src="img/soundnative.png" width="64" height="64" alt="Sound Native Accent Reduction app icon" /></a>
     <div>
       <h3>Sound Native Accent Reduction</h3>
       <p>English pronunciation coach with a real-time vowel analyzer.</p>
@@ -55,7 +57,7 @@
     </div>
   </div>
   <div class="app">
-    <img src="img/wordchain.png" width="64" height="64" alt="Word Chain: Voice First app icon" />
+    <a class="app-icon-link" href="https://apps.apple.com/app/id6760949218"><img src="img/wordchain.png" width="64" height="64" alt="Word Chain: Voice First app icon" /></a>
     <div>
       <h3>Word Chain: Voice First</h3>
       <p>Voice-first word chain game.</p>
@@ -63,7 +65,7 @@
     </div>
   </div>
   <div class="app">
-    <img src="img/birthdaycandles.png" width="64" height="64" alt="Blow Out Birthday Cake Candles app icon" />
+    <a class="app-icon-link" href="https://apps.apple.com/app/id6795642668"><img src="img/birthdaycandles.png" width="64" height="64" alt="Blow Out Birthday Cake Candles app icon" /></a>
     <div>
       <h3>Blow Out Birthday Cake Candles</h3>
       <p>Blow out real-looking birthday candles with your breath.</p>
