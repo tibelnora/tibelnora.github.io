@@ -91,6 +91,12 @@
     footer { text-align: center; margin-top: 24px;
              color: rgba(255,255,255,0.6); font-size: 13px; }
     footer a { color: rgba(255,255,255,0.85); }
+    .qr { display: none; }
+    @media (hover: hover) and (pointer: fine) and (min-width: 800px) {
+      .qr { display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 18px; }
+      .qr img { width: 112px; height: 112px; background: #fff; border-radius: 12px; padding: 6px; box-shadow: 0 6px 20px rgba(0,0,0,0.3); }
+      .qr span { font-size: 14px; line-height: 1.45; color: rgba(255,255,255,0.75); text-align: left; max-width: 150px; }
+    }
   </style>
 </head>
 <body>
@@ -106,6 +112,7 @@
     <div class="section">
       <p class="intro">Color Mood is a mood journal and color diary built around one idea: your feelings have patterns, and once you see them, everything changes. Pick the color that matches how you feel, and Color Mood turns it into a personal mood reading. Day by day, your emotional story becomes readable.</p>
       <div class="badge"><a href="https://apps.apple.com/app/id6762071350"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download Color Mood on the App Store" /></a></div>
+      <div class="qr"><img src="qr.svg" width="112" height="112" alt="QR code: download on the App Store" /><span>On a computer? Scan with your iPhone camera to download</span></div>
     </div>
 
     <div class="section">
