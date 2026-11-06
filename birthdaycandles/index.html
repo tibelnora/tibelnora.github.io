@@ -7,7 +7,13 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      background: #0a0a12;
+      background:
+        radial-gradient(circle at 12% 18%, rgba(255,214,90,0.28) 0, transparent 22%),
+        radial-gradient(circle at 88% 12%, rgba(255,120,190,0.30) 0, transparent 24%),
+        radial-gradient(circle at 80% 70%, rgba(90,220,230,0.20) 0, transparent 26%),
+        radial-gradient(circle at 15% 85%, rgba(255,150,80,0.22) 0, transparent 24%),
+        linear-gradient(160deg, #2a1170 0%, #491fa5 35%, #6a2fc0 65%, #a63f9e 100%);
+      background-attachment: fixed;
       color: #fff;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       min-height: 100vh;
@@ -26,29 +32,43 @@
     .container { max-width: 640px; width: 100%; }
     .header { text-align: center; margin-bottom: 56px; }
     .app-icon {
-      width: 96px; height: 96px;
-      border-radius: 22px;
-      background: linear-gradient(135deg, #ff8c3c, #cc3366);
+      width: 110px; height: 110px;
+      border-radius: 25px;
       margin: 0 auto 20px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 42px;
+      display: block;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
     }
     h1 { font-size: 28px; font-weight: 800; margin-bottom: 8px; }
-    .subtitle { color: rgba(255,255,255,0.45); font-size: 16px; }
+    .subtitle { color: rgba(255,255,255,0.75); font-size: 16px; }
+    .demo { text-align: center; margin: 8px 0 8px; }
+    .demo video { width: 100%; max-width: 280px; height: auto; border-radius: 26px; box-shadow: 0 14px 40px rgba(0,0,0,0.4); background: #000; }
+    .demo figcaption { margin-top: 10px; font-size: 13px; color: rgba(255,255,255,0.65); }
     .section { margin-bottom: 40px; }
+    .intro { font-size: 17px; line-height: 1.65; color: rgba(255,255,255,0.9); text-align: center; }
+    .badge { text-align: center; margin-top: 20px; }
+    .badge img { height: 48px; }
+    .card ul { padding-left: 20px; }
+    .card li { font-size: 15px; color: rgba(255,255,255,0.8); line-height: 1.6; margin-bottom: 4px; }
+    .note { font-size: 14px; color: rgba(255,255,255,0.7); line-height: 1.6; margin-top: 14px; text-align: center; }
     h2 { font-size: 13px; font-weight: 700; letter-spacing: 2px;
-         color: rgba(255,255,255,0.35); text-transform: uppercase; margin-bottom: 16px; }
+         color: rgba(255,255,255,0.6); text-transform: uppercase; margin-bottom: 16px; }
     .card {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.16);
+      backdrop-filter: blur(6px);
       border-radius: 16px;
       padding: 20px 24px;
       margin-bottom: 10px;
     }
+    details.faq summary { cursor: pointer; list-style: none; font-size: 16px; font-weight: 600; display: flex; justify-content: space-between; gap: 12px; }
+    details.faq summary::-webkit-details-marker { display: none; }
+    details.faq summary::after { content: "+"; font-size: 22px; line-height: 1; color: rgba(255,255,255,0.7); flex: none; }
+    details.faq[open] summary::after { content: "−"; }
+    details.faq p { margin-top: 10px; }
     .card h3 { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
-    .card p { font-size: 15px; color: rgba(255,255,255,0.55); line-height: 1.6; }
+    .card p { font-size: 15px; color: rgba(255,255,255,0.8); line-height: 1.6; }
     .privacy-link {
-      color: rgba(255,255,255,0.35);
+      color: rgba(255,255,255,0.7);
       font-size: 14px;
       text-decoration: none;
       display: block;
@@ -56,9 +76,10 @@
       margin-top: 48px;
     }
     .privacy-link + .privacy-link { margin-top: 12px; }
-    .privacy-link:hover { color: rgba(255,255,255,0.6); }
+    .privacy-link:hover { color: #fff; }
     footer { text-align: center; margin-top: 24px;
-             color: rgba(255,255,255,0.18); font-size: 13px; }
+             color: rgba(255,255,255,0.55); font-size: 13px; }
+    footer a { color: rgba(255,255,255,0.8); }
   </style>
 </head>
 <body>
@@ -66,43 +87,94 @@
   <div class="container">
 
     <div class="header">
-      <div class="app-icon">🎂</div>
+      <a href="https://apps.apple.com/app/id6795642668"><img class="app-icon" src="../img/birthdaycandles.png" width="110" height="110" alt="Blow Out Birthday Cake Candles app icon" /></a>
       <h1>Blow Out Birthday Cake Candles</h1>
       <p class="subtitle">Decorate a cake, make a wish, blow out the candles</p>
     </div>
 
+
+    <div class="section">
+      <p class="intro">Blow Out Birthday Cake Candles turns your phone into a real 3D birthday cake you can actually blow out. Decorate the cake, light the candles, hand the phone to the birthday star, and let them blow the candles out one by one, just like the real thing.</p>
+      <div class="badge"><a href="https://apps.apple.com/app/id6795642668"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download Blow Out Birthday Cake Candles on the App Store" /></a></div>
+    </div>
+
+    <div class="section">
+      <h2>What it does</h2>
+      <div class="card">
+        <h3>🎂 Decorate your own cake</h3>
+        <ul>
+          <li>Pick a candle count and style: classic or number candles</li>
+          <li>Choose frosting and cake colors from a wide palette</li>
+          <li>Add piped rosettes or flowers, and top the cake with any photo</li>
+          <li>Add a custom message or pick a ready-made phrase</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>🕯️ Blow out the candles</h3>
+        <ul>
+          <li>Real microphone-powered blow detection, or just tap a candle</li>
+          <li>Flickering flames that react to how hard you blow</li>
+          <li>Fireworks, a birthday song in English or Spanish in several instrument styles, and a "Happy Birthday" banner</li>
+          <li>Blow Again relights the same cake for the next person</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>📸 Capture the moment</h3>
+        <ul>
+          <li>An optional front-camera photo, taken the instant the last candle goes out</li>
+          <li>Save or share the cake and your photo with one tap</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>💌 Send a card</h3>
+        <ul>
+          <li>Celebrating someone far away? Design and send a birthday card instead</li>
+          <li>Add a photo, then choose backgrounds, colors, borders and accents like balloons, flowers or a mini cake</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>🔔 Never forget a birthday</h3>
+        <ul>
+          <li>Save everyone's birthday in one place, or import from Contacts or Calendar</li>
+          <li>Get a reminder on the day, with an optional early heads-up</li>
+        </ul>
+      </div>
+      <p class="note">Free to use, with no sign-up and no account. Everything you create stays on your device unless you choose to share it. An optional one-time purchase removes ads and unlocks extra decoration styles.</p>
+    </div>
+
+
     <div class="section">
       <h2>Frequently Asked Questions</h2>
 
-      <div class="card">
-        <h3>The candles won't blow out — what do I do?</h3>
+      <details class="card faq">
+        <summary>The candles won't blow out — what do I do?</summary>
         <p>Make sure the microphone toggle at the top of the screen is on (it looks like a mic icon) and that you've allowed microphone access when prompted. Blow steadily and directly toward the phone from a few inches away — a short, weak puff may not register. You can also just tap a candle to put it out by hand.</p>
-      </div>
+      </details>
 
-      <div class="card">
-        <h3>Why does the app ask for microphone access?</h3>
+      <details class="card faq">
+        <summary>Why does the app ask for microphone access?</summary>
         <p>The microphone is used only to detect when you blow, so the candles can react in real time. Audio is processed on your device and is never recorded or sent anywhere.</p>
-      </div>
+      </details>
 
-      <div class="card">
-        <h3>Why does the app ask for camera access?</h3>
+      <details class="card faq">
+        <summary>Why does the app ask for camera access?</summary>
         <p>Camera access is optional — turn it on with the camera toggle if you'd like the app to snap a photo of you the moment the last candle goes out. If you leave it off, the camera is never used.</p>
-      </div>
+      </details>
 
-      <div class="card">
-        <h3>How do I save or share my cake photo?</h3>
+      <details class="card faq">
+        <summary>How do I save or share my cake photo?</summary>
         <p>After the candles are blown out, use the Share button to save the photo to your library or send it to someone. If you enabled the camera, your photo is included alongside the cake.</p>
-      </div>
+      </details>
 
-      <div class="card">
-        <h3>Can I make a card instead of blowing out candles?</h3>
+      <details class="card faq">
+        <summary>Can I make a card instead of blowing out candles?</summary>
         <p>Yes — from the very first screen, choose "Design & Share a Card" instead of "Decorate a Cake, Blow Out Candles" to make and share a birthday card without any candles involved.</p>
-      </div>
+      </details>
 
-      <div class="card">
-        <h3>Is my birthday message or photo saved anywhere online?</h3>
+      <details class="card faq">
+        <summary>Is my birthday message or photo saved anywhere online?</summary>
         <p>No. Everything you create stays on your device unless you choose to share or save it yourself — there's no account, sign-in, or cloud sync.</p>
-      </div>
+      </details>
     </div>
 
     <div class="section">
@@ -113,12 +185,17 @@
       </div>
     </div>
 
+    <figure class="demo">
+      <video src="app-preview.mp4" poster="app-preview-poster.jpg" width="444" height="962" autoplay muted loop playsinline controls preload="metadata" aria-label="App preview: decorating a cake, making a wish and blowing out the candles"></video>
+      <figcaption>Tap the speaker to turn on the sound</figcaption>
+    </figure>
+
     <a class="privacy-link" href="/birthdaycandles/privacy.html">Privacy Policy</a>
     <a class="privacy-link" href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use (EULA)</a>
 
     <footer>
       <p style="margin-top:16px;">© 2026. All rights reserved.</p>
-      <p style="margin-top:8px;"><a href="/">More apps from us</a></p>
+      <p style="margin-top:8px;"><a href="/">Our apps</a></p>
     </footer>
 
   </div>
