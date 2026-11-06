@@ -3,11 +3,16 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Color Mood & Relax — Support</title>
+  <title>Color Mood: Journal &amp; Relax — Support</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
-      background: #0a0a12;
+      background:
+        radial-gradient(circle at 50% 0%, rgba(245,218,113,0.30) 0, transparent 30%),
+        radial-gradient(circle at 10% 30%, rgba(232,113,37,0.25) 0, transparent 26%),
+        radial-gradient(circle at 90% 75%, rgba(255,150,120,0.22) 0, transparent 28%),
+        linear-gradient(165deg, #8e2d24 0%, #b2453a 35%, #c1523f 60%, #7a2533 100%);
+      background-attachment: fixed;
       color: #fff;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       min-height: 100vh;
@@ -19,36 +24,47 @@
     .glow {
       width: 220px; height: 220px;
       border-radius: 50%;
-      background: radial-gradient(circle, rgba(120,80,255,0.35) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(255,214,120,0.35) 0%, transparent 70%);
       position: fixed; top: -60px; left: 50%; transform: translateX(-50%);
       pointer-events: none;
     }
     .container { max-width: 640px; width: 100%; }
     .header { text-align: center; margin-bottom: 56px; }
     .app-icon {
-      width: 96px; height: 96px;
-      border-radius: 22px;
-      background: linear-gradient(135deg, #6644cc, #cc4488);
+      width: 110px; height: 110px;
+      border-radius: 25px;
       margin: 0 auto 20px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 42px;
+      display: block;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.35);
     }
     h1 { font-size: 28px; font-weight: 800; margin-bottom: 8px; }
-    .subtitle { color: rgba(255,255,255,0.45); font-size: 16px; }
+    .subtitle { color: rgba(255,255,255,0.8); font-size: 16px; }
     .section { margin-bottom: 40px; }
     h2 { font-size: 13px; font-weight: 700; letter-spacing: 2px;
-         color: rgba(255,255,255,0.35); text-transform: uppercase; margin-bottom: 16px; }
+         color: rgba(255,255,255,0.7); text-transform: uppercase; margin-bottom: 16px; }
     .card {
-      background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      backdrop-filter: blur(6px);
       border-radius: 16px;
       padding: 20px 24px;
       margin-bottom: 10px;
     }
     .support-text { font-size: 15px; color: rgba(255,255,255,0.8); line-height: 1.6; }
     .support-text a { color: #fff; }
+    .intro { font-size: 17px; line-height: 1.65; color: rgba(255,255,255,0.92); text-align: center; }
+    .badge { text-align: center; margin-top: 20px; }
+    .badge img { height: 48px; }
+    .card ul { padding-left: 20px; }
+    .card li { font-size: 15px; color: rgba(255,255,255,0.85); line-height: 1.6; margin-bottom: 4px; }
+    .note { font-size: 14px; color: rgba(255,255,255,0.75); line-height: 1.6; margin-top: 14px; text-align: center; }
+    details.faq summary { cursor: pointer; list-style: none; font-size: 16px; font-weight: 600; display: flex; justify-content: space-between; gap: 12px; }
+    details.faq summary::-webkit-details-marker { display: none; }
+    details.faq summary::after { content: "+"; font-size: 22px; line-height: 1; color: rgba(255,255,255,0.75); flex: none; }
+    details.faq[open] summary::after { content: "−"; }
+    details.faq p { margin-top: 10px; }
     .card h3 { font-size: 16px; font-weight: 600; margin-bottom: 6px; }
-    .card p { font-size: 15px; color: rgba(255,255,255,0.55); line-height: 1.6; }
+    .card p { font-size: 15px; color: rgba(255,255,255,0.85); line-height: 1.6; }
     .contact-btn {
       display: inline-block;
       margin-top: 16px;
@@ -63,16 +79,18 @@
     }
     .contact-btn:hover { background: rgba(120,80,255,0.30); }
     .privacy-link {
-      color: rgba(255,255,255,0.35);
+      color: rgba(255,255,255,0.8);
       font-size: 14px;
       text-decoration: none;
       display: block;
       text-align: center;
       margin-top: 48px;
     }
-    .privacy-link:hover { color: rgba(255,255,255,0.6); }
+    .privacy-link:hover { color: #fff; }
+    .privacy-link + .privacy-link { margin-top: 12px; }
     footer { text-align: center; margin-top: 24px;
-             color: rgba(255,255,255,0.18); font-size: 13px; }
+             color: rgba(255,255,255,0.6); font-size: 13px; }
+    footer a { color: rgba(255,255,255,0.85); }
   </style>
 </head>
 <body>
@@ -80,43 +98,91 @@
   <div class="container">
 
     <div class="header">
-      <div class="app-icon">🎨</div>
-      <h1>Color Mood & Relax</h1>
-      <p class="subtitle">Mood journal · Patterns · Wellness tools</p>
+      <a href="https://apps.apple.com/app/id6762071350"><img class="app-icon" src="../img/colormood.png" width="110" height="110" alt="Color Mood: Journal &amp; Relax app icon" /></a>
+      <h1>Color Mood: Journal &amp; Relax</h1>
+      <p class="subtitle">Mood journal · Color diary · Patterns · Relaxation</p>
+    </div>
+
+    <div class="section">
+      <p class="intro">Color Mood is a mood journal and color diary built around one idea: your feelings have patterns, and once you see them, everything changes. Pick the color that matches how you feel, and Color Mood turns it into a personal mood reading. Day by day, your emotional story becomes readable.</p>
+      <div class="badge"><a href="https://apps.apple.com/app/id6762071350"><img src="https://developer.apple.com/assets/elements/badges/download-on-the-app-store.svg" alt="Download Color Mood on the App Store" /></a></div>
+    </div>
+
+    <div class="section">
+      <h2>What it does</h2>
+      <div class="card">
+        <h3>🎨 Journal your mood in color</h3>
+        <ul>
+          <li>Pick a color from the color wheel or an emotion from a list, and get a mood reading through color psychology</li>
+          <li>Tag entries with food, body, feelings and relationships, and add notes, a photo or a hand-drawn sketch</li>
+          <li>Flip through your color diary as a 3D book</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>📊 See your patterns</h3>
+        <ul>
+          <li>See how your tags, weather and barometric pressure relate to your mood over time</li>
+          <li>Connect Apple Health to compare sleep, steps, exercise, heart rate and HRV with your mood</li>
+          <li>Import your history from Daylio, Pixels, Day One or any CSV app</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>🔥 Relax and let it out</h3>
+        <ul>
+          <li>Sit by a campfire that reacts to your breath, under a sky of stars</li>
+          <li>A lava lamp, guided breathwork tuned to your mood color, and candles you load with worries and blow out</li>
+          <li>Write it all on the Rant &amp; Release pad, then burn it, or draw freely on the Doodle Pad</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>⌚ Log in seconds</h3>
+        <ul>
+          <li>Log your mood from Apple Watch: turn the crown to pick a color, add tags or a voice note</li>
+          <li>Quick-log from Home Screen widgets without opening the app</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>🎁 Little gifts every day</h3>
+        <ul>
+          <li>A music pick, a book and a recipe chosen for your mood that day</li>
+        </ul>
+      </div>
+      <p class="note">Free to download, with daily mood journaling included. Private and on-device, with no account needed. Color Mood Pro (monthly, yearly or a one-time purchase) removes ads and unlocks all 9 pattern insight cards, your full Patterns history, custom date ranges, PDF and CSV export, and Face ID or PIN lock for your journal.</p>
+      <p class="note">Color Mood is a self-help tool for tracking moods and habits. It does not provide medical advice and is not a substitute for professional care.</p>
     </div>
 
     <div class="section">
       <h2>Frequently Asked Questions</h2>
 
-      <div class="card">
-        <h3>How do I restore my Pro purchase?</h3>
+      <details class="card faq">
+        <summary>How do I restore my Pro purchase?</summary>
         <p>Open the app → tap the menu icon → Settings → scroll down and tap "Restore Purchase". Your purchase will be restored automatically if you're signed in with the same Apple ID.</p>
-      </div>
+      </details>
 
-      <div class="card">
-        <h3>I forgot my journal PIN. How do I reset it?</h3>
+      <details class="card faq">
+        <summary>I forgot my journal PIN. How do I reset it?</summary>
         <p>On the PIN lock screen, tap "Forgot PIN?" and verify with your device passcode. You'll be able to set a new PIN immediately.</p>
-      </div>
+      </details>
 
-      <div class="card">
-        <h3>How do I delete all my data?</h3>
+      <details class="card faq">
+        <summary>How do I delete all my data?</summary>
         <p>To delete an individual entry, open it and tap the trash icon. You can also swipe left on an entry in the Calendar day view. To remove all data, delete the app from your device. </p>
-      </div>
+      </details>
 
-      <div class="card">
-        <h3>Why isn't weather logging for my entries?</h3>
+      <details class="card faq">
+        <summary>Why isn't weather logging for my entries?</summary>
         <p>Weather logs automatically when you save a mood entry, but requires location permission. Go to iPhone Settings → Color Mood → Location → select "While Using the App".</p>
-      </div>
+      </details>
 
-      <div class="card">
-        <h3>Why isn't Apple Health data showing in Patterns?</h3>
+      <details class="card faq">
+        <summary>Why isn't Apple Health data showing in Patterns?</summary>
         <p>Go to Settings inside the app and tap "Connect Apple Health", then approve the permissions in the Health app. Make sure you have at least a few days of health data recorded.</p>
-      </div>
+      </details>
 
-      <div class="card">
-        <h3>Is my journal backed up to iCloud?</h3>
+      <details class="card faq">
+        <summary>Is my journal backed up to iCloud?</summary>
         <p>No. All data stays only on your device — there is no cloud sync or account. Use the CSV export (Pro feature) to back up your entries manually.</p>
-      </div>
+      </details>
     </div>
 
     <div class="section">
@@ -126,6 +192,7 @@
 
     <a class="privacy-link"
        href="/colormood/privacy.html">Privacy Policy</a>
+    <a class="privacy-link" href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Terms of Use (EULA)</a>
 
     <footer>
       <p style="margin-top:16px;">© 2026. All rights reserved.</p>
