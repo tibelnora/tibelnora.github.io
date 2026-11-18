@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://tibelnora.github.io/sitemap.xml
