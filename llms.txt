@@ -14,5 +14,5 @@ Sound Native Accent Reduction is an accent reduction and pronunciation training 
 ## Other apps
 
 - [Color Mood: Journal & Relax](https://tibelnora.github.io/colormood/): mood journal and relaxation app ([App Store](https://apps.apple.com/app/id6762071350))
-- [Word Chain: Voice First](https://tibelnora.github.io/wordchain/): voice word-chain game ([App Store](https://apps.apple.com/app/id6760949218))
+- [Word Chain: Voice First](https://tibelnora.github.io/wordchain/): last-letter word chain game you can play hands-free by voice, vs AI, 2-Player or Daily Challenge, in 7 dictionary languages ([App Store](https://apps.apple.com/app/id6760949218)); guide: [7 hands-free word games to play out loud](https://tibelnora.github.io/wordchain/blog/hands-free-word-games.html)
 - [Blow Out Birthday Cake Candles](https://tibelnora.github.io/birthdaycandles/): blow out virtual birthday candles ([App Store](https://apps.apple.com/app/id6795642668))
