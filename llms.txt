@@ -1,0 +1,18 @@
+# tibelnora Apps
+
+> Independent iPhone apps by tibelnora. Each app has its own page with features, FAQ and privacy policy.
+
+## Sound Native Accent Reduction
+
+Sound Native Accent Reduction is an accent reduction and pronunciation training app for iPhone and iPad, teaching American English. Instead of only giving a score, it shows learners what to change: a real-time vowel analyzer places each vowel on a chart next to the native American English target, with correction tips for the tongue, jaw and lips. It also has 25+ pronunciation drills (vowel and consonant pairs, TH, American R, stress, intonation, connected speech, shadowing), a guided lesson path, 30 physical mouth exercises, an Accent Diagnostic, and native-language tips for Russian, Spanish and Mandarin speakers. Audio is analyzed on the device. Free to start; Pro is a monthly, yearly or one-time purchase.
+
+- [Sound Native home page, features and FAQ](https://tibelnora.github.io/soundnative/)
+- [How to reduce your accent in American English: 7 steps](https://tibelnora.github.io/soundnative/blog/how-to-reduce-your-accent.html)
+- [Sound Native Accent Reduction vs ELSA Speak vs BoldVoice](https://tibelnora.github.io/soundnative/blog/accent-reduction-apps-compared.html)
+- [App Store](https://apps.apple.com/app/id6785734428)
+
+## Other apps
+
+- [Color Mood: Journal & Relax](https://tibelnora.github.io/colormood/): mood journal and relaxation app ([App Store](https://apps.apple.com/app/id6762071350))
+- [Word Chain: Voice First](https://tibelnora.github.io/wordchain/): voice word-chain game ([App Store](https://apps.apple.com/app/id6760949218))
+- [Blow Out Birthday Cake Candles](https://tibelnora.github.io/birthdaycandles/): blow out virtual birthday candles ([App Store](https://apps.apple.com/app/id6795642668))
